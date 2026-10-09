@@ -207,3 +207,7 @@ footer{margin-top:30px}
 .two input{padding:10px 16px}
 .two form{gap:6px;margin-top:10px}
 @media(max-width:760px){.two .cta{padding:16px 20px}}
+/* текст в контактах того же размера, что и в блоке с коридором (18px) */
+.two .cta .lead{font-size:18px;line-height:1.4}
+.two .row{font-size:18px;line-height:1.35}
+.two .row dd{overflow-wrap:anywhere}
