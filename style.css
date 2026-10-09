@@ -184,3 +184,5 @@ mask-composite:intersect}
 #contacts{padding-top:0}
 #approach{padding-top:14px}
 #contacts{padding-top:14px}
+/* компьютер: текст «Наш подход» узкой колонкой слева, правая половина фото остаётся свободной */
+@media(min-width:761px){.stage .over{width:49%;max-width:none}.stage .over p{font-size:15px;line-height:1.45;margin-bottom:12px}.stage .over p.end{margin-bottom:0}}
