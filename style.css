@@ -242,3 +242,5 @@ footer{margin-top:30px}
 .two .cta:not(#form) .req3{position:absolute;left:28px;right:28px;top:50%;transform:translateY(-50%)}
 @media(max-width:760px){.two .cta:not(#form) .req3{left:20px;right:20px}}
 .two .cta:not(#form) .grp{position:static}
+/* после двоеточия — расстояние в два пробела */
+.grp .r{display:flex;grid-template-columns:none;gap:.55em}
