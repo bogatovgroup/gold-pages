@@ -186,3 +186,7 @@ mask-composite:intersect}
 #contacts{padding-top:14px}
 /* компьютер: текст «Наш подход» узкой колонкой слева (шрифт прежний), правая половина фото свободна */
 @media(min-width:761px){.stage .over{width:49%;max-width:none}.stage .over p{text-wrap:pretty}}
+/* меньше пустоты: под кнопкой главного экрана и над заголовком «О компании» (вдвое) */
+.hero{padding-bottom:20px}
+#about{padding-top:50px}
+.hero{padding-bottom:33px}
