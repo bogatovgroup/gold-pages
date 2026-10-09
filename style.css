@@ -134,3 +134,6 @@ footer .req span{white-space:nowrap}
 @media(max-width:760px){.two .cta{padding:24px 22px}.two .row dd{margin-bottom:6px}.two .row{grid-template-columns:1fr}}
 /* телефон: внутренние отступы рамки меню сверху и снизу вдвое больше, межстрочное расстояние прежнее */
 @media(max-width:760px){nav{padding-top:10px;padding-bottom:6px}}
+/* подвал: две обычные строки одним шрифтом */
+footer{font-size:14px;font-weight:400;gap:8px}
+footer .req{font-size:14px;color:var(--mut)}
