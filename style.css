@@ -87,3 +87,8 @@ nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
 }
 @media(max-width:760px){nav{padding-inline:8px}nav a.l{padding:7px 4px;font-size:12px}}
 @media(max-width:380px){nav a.l{font-size:11px;padding:7px 3px}}
+/* контакты слева, заявка справа; на телефоне заявка сверху */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.two .cta{margin-bottom:0}
+.two form{max-width:none}
+@media(max-width:760px){.two{grid-template-columns:1fr}.two #form{order:-1}}
