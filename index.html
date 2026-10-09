@@ -90,7 +90,7 @@
 </div>
 <script>
 // Высота шапки для отступа главного экрана
-(function(){var n=document.querySelector('nav');function f(){document.documentElement.style.setProperty('--navh',(n.offsetHeight+18)+'px')}f();window.addEventListener('resize',f)})();
+(function(){var n=document.querySelector('nav');function f(){document.documentElement.style.setProperty('--navh',(n.offsetHeight+(parseFloat(getComputedStyle(n).marginTop)||0))+'px')}f();window.addEventListener('resize',f)})();
 // Живая ткань: фото колышется, как на ветру (WebGL), без WebGL остаётся статичная картинка
 (function(){
 var sec=document.getElementById('about'),cv=sec.querySelector('.silk-gl');
