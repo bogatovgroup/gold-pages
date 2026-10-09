@@ -249,3 +249,9 @@ footer{margin-top:30px}
 .two .cta:not(#form){min-height:290px}
 .grp{gap:4px}
 .grp .r{overflow-wrap:anywhere}
+/* порядок: фраза, по центру блока телефон и почта, внизу ООО, ИНН, ОГРН */
+.two .cta:not(#form){min-height:330px}
+.two .cta:not(#form) .req3{position:static;transform:none;left:auto;right:auto;top:auto}
+.contact2{position:absolute;left:28px;right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:4px}
+@media(max-width:760px){.two .cta:not(#form) .req3{left:auto;right:auto}.contact2{left:20px;right:20px}}
+.grp{gap:0}
