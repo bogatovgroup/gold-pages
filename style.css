@@ -214,3 +214,12 @@ footer{margin-top:30px}
 /* контакты: три группы с отступами — заголовок и фраза, затем ООО и реквизиты, затем телефон и почта */
 .two .cta h3{margin-top:26px!important}
 .two .row dt:nth-of-type(3),.two .row dd:nth-of-type(3){margin-top:18px!important}
+/* бегущая линия слева */
+.trail{position:absolute;left:4px;top:0;bottom:0;z-index:0;pointer-events:none}
+.trail svg{display:block;overflow:visible}
+.trail-base{fill:none;stroke:rgba(232,194,106,.28);stroke-width:1.5}
+.trail-fill{fill:none;stroke:#e8c26a;stroke-width:2;stroke-linecap:round;filter:drop-shadow(0 0 4px rgba(232,194,106,.6))}
+.trail-lantern{fill:#ffe9a8;filter:drop-shadow(0 0 8px #e8c26a) drop-shadow(0 0 16px rgba(232,194,106,.7))}
+.trail-st{fill:#0b0a09;stroke:rgba(232,194,106,.55);stroke-width:1.5;transition:fill .3s,stroke .3s}
+.trail-st.on{fill:#e8c26a;stroke:#e8c26a}
+@media(max-width:760px){.trail{left:2px}}

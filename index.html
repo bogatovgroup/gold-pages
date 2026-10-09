@@ -139,6 +139,44 @@ img.src='silk.jpg';
 window.addEventListener('resize',function(){if(sec.classList.contains('gl'))size()});
 if('IntersectionObserver' in window)new IntersectionObserver(function(e){vis=e[0].isIntersecting},{rootMargin:'200px'}).observe(sec);
 })();
+// Бегущая линия слева: извилистая золотая нить, по которой «бежит» огонёк вслед за прокруткой
+(function(){
+var wrap=document.querySelector('.wrap');if(!wrap)return;
+var NS='http://www.w3.org/2000/svg';
+function mk(t,c){var e=document.createElementNS(NS,t);e.setAttribute('class',c);return e}
+var tr=document.createElement('div');tr.className='trail';tr.setAttribute('aria-hidden','true');
+var svg=document.createElementNS(NS,'svg'),base=mk('path','trail-base'),fill=mk('path','trail-fill'),gs=mk('g','trail-gs'),lan=mk('circle','trail-lantern');
+lan.setAttribute('r','5.5');
+svg.appendChild(base);svg.appendChild(fill);svg.appendChild(gs);svg.appendChild(lan);tr.appendChild(svg);wrap.insertBefore(tr,wrap.firstChild);
+var pts=[],L=0,H=0,st=[],busy=false;
+function at(y){var a=0,b=pts.length-1;if(y<=pts[0].y)return pts[0];if(y>=pts[b].y)return pts[b];
+ while(b-a>1){var m=(a+b)>>1;if(pts[m].y<=y)a=m;else b=m}
+ var p=pts[a],q=pts[b],t=(y-p.y)/((q.y-p.y)||1);return{l:p.l+(q.l-p.l)*t,x:p.x+(q.x-p.x)*t,y:y}}
+function build(){
+ H=wrap.offsetHeight;var m=window.innerWidth<=760,W=m?26:44,cx=W/2,a=m?4:11,seg=420;
+ svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox','0 0 '+W+' '+H);tr.style.width=W+'px';
+ var d='M '+cx+' 0',x=cx,dir=-1,y=0;
+ while(y<H){var ny=Math.min(H,y+seg),nx=cx+dir*a,h=(ny-y)/2;d+=' C '+x+' '+(y+h)+', '+nx+' '+(y+h)+', '+nx+' '+ny;x=nx;y=ny;dir=-dir}
+ base.setAttribute('d',d);fill.setAttribute('d',d);L=base.getTotalLength();
+ pts=[];var n=Math.max(60,Math.round(H/20));
+ for(var i=0;i<=n;i++){var p=base.getPointAtLength(L*i/n);pts.push({l:L*i/n,x:p.x,y:p.y})}
+ gs.textContent='';st=[];
+ var wt=wrap.getBoundingClientRect().top;
+ [['h1',0],['#about>h2',1],['#services>h2',1],['#approach>h2',1],['#contacts>h2',1]].forEach(function(q){
+  var el=document.querySelector(q[0]);if(!el)return;var r=el.getBoundingClientRect(),yy=r.top-wt+r.height/2,p=at(yy),c=mk('circle','trail-st');
+  c.setAttribute('cx',p.x);c.setAttribute('cy',yy);c.setAttribute('r','4');gs.appendChild(c);st.push({y:yy,el:c})});
+ fill.style.strokeDasharray=L;update()}
+function update(){
+ busy=false;if(!pts.length)return;
+ var top=wrap.getBoundingClientRect().top,ly=Math.max(0,Math.min(H,window.innerHeight*.45-top)),p=at(ly);
+ fill.style.strokeDashoffset=L-p.l;lan.setAttribute('cx',p.x);lan.setAttribute('cy',ly);
+ for(var i=0;i<st.length;i++){st[i].el.setAttribute('class',ly>=st[i].y?'trail-st on':'trail-st')}}
+function req(){update()}
+var rb=0;function rebuild(){cancelAnimationFrame(rb);rb=requestAnimationFrame(build)}
+window.addEventListener('scroll',req,{passive:true});window.addEventListener('resize',rebuild);window.addEventListener('load',rebuild);
+if('ResizeObserver' in window)new ResizeObserver(rebuild).observe(wrap);
+build();
+})();
 // Золотая пыль на главном экране: три слоя глубины, дымка, блики
 (function(){
 var c=document.getElementById('dust'),x=c.getContext('2d'),W=0,H=0,P=[],d=Math.min(window.devicePixelRatio||1,2),mx=0,my=0,tx=0,ty=0,raf,T=0;
