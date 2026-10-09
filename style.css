@@ -110,3 +110,11 @@ nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
 .silk-gl{display:none;position:absolute;z-index:-1;top:20px;left:50%;width:100vw;height:calc(100% + 40px);margin-left:-50vw;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent);mask-image:linear-gradient(180deg,transparent,#000 22%,#000 78%,transparent)}
 #about.gl .silk-gl{display:block}
 #about.gl:before{display:none}
+/* телефон: ещё плотнее шапка */
+@media(max-width:760px){nav{padding-top:5px;padding-bottom:3px;gap:0}nav div{row-gap:0}nav a.l{padding-top:2px;padding-bottom:2px;line-height:1.15}.logo{line-height:1.1}}
+/* контакты и подвал */
+.row a,footer a{color:inherit;text-decoration:none}
+.row a:hover{color:var(--gold)}
+footer{display:flex;flex-direction:column;gap:6px;margin-top:50px}
+footer .req{margin:0;font-size:14px}
+footer .req b{display:inline;font-size:14px;margin:0 8px 0 0}
