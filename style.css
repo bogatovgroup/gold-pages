@@ -190,3 +190,20 @@ mask-composite:intersect}
 .hero{padding-bottom:20px}
 #about{padding-top:50px}
 .hero{padding-bottom:33px}
+/* блоки «Обсудим вашу задачу» и «Связаться с нами»: ниже в 1,5 раза, подписи внутри полей */
+.two .cta{padding:22px 28px}
+.two .cta h2{font-size:clamp(20px,2.4vw,28px)}
+.two .cta .lead{font-size:15px;margin-top:6px!important;line-height:1.3}
+.two .cta h3{font-size:17px;margin-top:12px!important}
+.two .row{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:6px 0 0;font-size:15px;line-height:1.3}
+.two .row dt{color:var(--mut)}
+.two .row dd{margin:0!important}
+.two form{gap:7px;margin-top:12px}
+.two input{padding:11px 16px;font-size:16px;margin:0;border-radius:14px}
+.two form .btn{padding:12px 24px}
+.two .msg{margin-top:2px;font-size:14px}
+@media(max-width:760px){.two .cta{padding:18px 20px}.two .row{grid-template-columns:auto 1fr}}
+footer{margin-top:30px}
+.two input{padding:10px 16px}
+.two form{gap:6px;margin-top:10px}
+@media(max-width:760px){.two .cta{padding:16px 20px}}
