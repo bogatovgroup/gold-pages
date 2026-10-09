@@ -118,3 +118,17 @@ nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
 footer{display:flex;flex-direction:column;gap:6px;margin-top:50px}
 footer .req{margin:0;font-size:14px}
 footer .req b{display:inline;font-size:14px;margin:0 8px 0 0}
+/* подвал: название отдельной строкой, реквизиты под ним */
+footer .req b{display:block;margin:0 0 2px}
+footer .req span{white-space:nowrap}
+/* блоки «Связаться» и «Обсудим»: компактнее, одинаковая высота */
+.two{grid-auto-rows:1fr}
+.two .cta{padding:32px 34px;line-height:1.35}
+.two .cta h2{line-height:1.15}
+.two .cta .lead{margin-top:8px!important;line-height:1.4}
+.two .cta h3{margin-top:22px!important}
+.two .row{margin:12px 0 0;row-gap:4px}
+.two form{gap:8px;margin-top:16px}
+.two label{gap:4px}
+.two .msg{margin-top:0}
+@media(max-width:760px){.two .cta{padding:24px 22px}.two .row dd{margin-bottom:6px}.two .row{grid-template-columns:1fr}}
