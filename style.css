@@ -255,3 +255,9 @@ footer{margin-top:30px}
 .contact2{position:absolute;left:28px;right:28px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:4px}
 @media(max-width:760px){.two .cta:not(#form) .req3{left:auto;right:auto}.contact2{left:20px;right:20px}}
 .grp{gap:0}
+/* расстояния между группами в блоке контактов вдвое меньше: обычный поток вместо центровки по высоте */
+.two .cta:not(#form){min-height:0}
+.contact2{position:static;transform:none;left:auto;right:auto;top:auto;margin-top:27px}
+.two .cta:not(#form) .req3{margin-top:8px}
+.grp{flex:none;margin-top:0;justify-content:flex-start}
+@media(max-width:760px){.contact2{margin-top:36px}.two .cta:not(#form) .req3{margin-top:10px}}
