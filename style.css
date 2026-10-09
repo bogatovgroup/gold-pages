@@ -101,3 +101,6 @@ nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
 /* телефон: меню крупнее в 1,5 раза (12px -> 18px), две строки по два пункта */
 @media(max-width:760px){nav div{display:grid;grid-template-columns:1fr 1fr;gap:2px 6px}nav a.l{font-size:18px;padding:9px 6px;text-align:center}}
 @media(max-width:380px){nav a.l{font-size:17px;padding:9px 4px}}
+/* телефон в горизонтальном положении: меню одной крупной строкой */
+@media(min-width:560px) and (max-width:760px){nav div{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:0}nav a.l{font-size:19px;padding:8px 10px}}
+@media(min-width:560px) and (max-width:680px){nav a.l{font-size:17px;padding:8px 6px}}
