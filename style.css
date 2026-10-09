@@ -244,3 +244,8 @@ footer{margin-top:30px}
 .two .cta:not(#form) .grp{position:static}
 /* после двоеточия — расстояние в два пробела */
 .grp .r{display:flex;grid-template-columns:none;gap:.55em}
+/* один блок контактов на всю ширину; телефон и почта внизу */
+.two{grid-template-columns:1fr;grid-auto-rows:auto}
+.two .cta:not(#form){min-height:290px}
+.grp{gap:4px}
+.grp .r{overflow-wrap:anywhere}
