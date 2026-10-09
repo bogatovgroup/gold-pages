@@ -223,7 +223,14 @@ footer{margin-top:30px}
 .trail-st{fill:#0b0a09;stroke:rgba(232,194,106,.55);stroke-width:1.5;transition:fill .3s,stroke .3s}
 .trail-st.on{fill:#e8c26a;stroke:#e8c26a}
 @media(max-width:760px){.trail{left:2px}}
-/* меню закреплено сверху при прокрутке (класс .glass раньше сбрасывал sticky в relative) */
-nav.glass{position:sticky;top:calc(14px + env(safe-area-inset-top,0px));z-index:50}
 /* «Свяжитесь с нами, чтобы найти решение вашей задачи» — размер бывшего заголовка «Обсудим вашу задачу» */
 .two .cta .lead{font-size:clamp(20px,2.4vw,28px);line-height:1.25;margin-top:0!important}
+/* блок «ООО «ЕР ГРУПП» …»: строки распределены равномерно по высоте карточки */
+.two .cta:not(#form){display:flex;flex-direction:column}
+.two .cta:not(#form) .lead{flex:none}
+.grp{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;margin-top:6px}
+.grp h3{margin:0!important;font-size:18px}
+.grp .r{display:grid;grid-template-columns:110px 1fr;gap:0 14px;font-size:18px;line-height:1.3}
+.grp .r span:first-child{color:var(--mut)}
+.grp a{color:inherit;text-decoration:none}
+.grp{margin-top:-3px}
