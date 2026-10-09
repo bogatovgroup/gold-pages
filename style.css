@@ -170,3 +170,5 @@ mask-composite:intersect}
 /* меньше пустоты над «Наш подход» и над «Контакты» */
 #approach{padding-top:40px}
 #contacts{padding-top:20px}
+/* телефон: логотип дальше от меню (вдвое), строки меню ближе друг к другу (вдвое) */
+@media(max-width:760px){nav{gap:9px}nav div{row-gap:11px}}
