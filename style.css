@@ -211,3 +211,6 @@ footer{margin-top:30px}
 .two .cta .lead{font-size:18px;line-height:1.4}
 .two .row{font-size:18px;line-height:1.35}
 .two .row dd{overflow-wrap:anywhere}
+/* контакты: три группы с отступами — заголовок и фраза, затем ООО и реквизиты, затем телефон и почта */
+.two .cta h3{margin-top:26px!important}
+.two .row dt:nth-of-type(3),.two .row dd:nth-of-type(3){margin-top:18px!important}
