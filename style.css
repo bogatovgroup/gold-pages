@@ -225,3 +225,5 @@ footer{margin-top:30px}
 @media(max-width:760px){.trail{left:2px}}
 /* меню закреплено сверху при прокрутке (класс .glass раньше сбрасывал sticky в relative) */
 nav.glass{position:sticky;top:calc(14px + env(safe-area-inset-top,0px));z-index:50}
+/* «Свяжитесь с нами, чтобы найти решение вашей задачи» — размер бывшего заголовка «Обсудим вашу задачу» */
+.two .cta .lead{font-size:clamp(20px,2.4vw,28px);line-height:1.25;margin-top:0!important}
