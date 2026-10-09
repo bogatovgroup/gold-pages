@@ -234,3 +234,11 @@ footer{margin-top:30px}
 .grp .r span:first-child{color:var(--mut)}
 .grp a{color:inherit;text-decoration:none}
 .grp{margin-top:-3px}
+/* три строки (название, ИНН, ОГРН) сгруппированы плотно и стоят посередине блока */
+.req3{display:flex;flex-direction:column;gap:3px}
+.req3 h3{margin:0!important}
+/* группа из трёх строк строго по центру карточки, телефон прижат к низу */
+.grp{justify-content:flex-end;margin-top:0}
+.two .cta:not(#form) .req3{position:absolute;left:28px;right:28px;top:50%;transform:translateY(-50%)}
+@media(max-width:760px){.two .cta:not(#form) .req3{left:20px;right:20px}}
+.two .cta:not(#form) .grp{position:static}
