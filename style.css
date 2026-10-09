@@ -165,3 +165,5 @@ mask-composite:intersect}
 @media(min-width:761px){.stage{padding:72px clamp(56px,6vw,84px)}}
 @media(max-width:760px){.stage{padding:60px 24px}}
 @media(max-width:760px){.stage{-webkit-mask-image:linear-gradient(180deg,transparent,#000 56px,#000 calc(100% - 56px),transparent),linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(180deg,transparent,#000 56px,#000 calc(100% - 56px),transparent),linear-gradient(90deg,transparent,#000 14px,#000 calc(100% - 14px),transparent)}}
+/* телефон: расстояние между строками меню вдвое больше (шаг строк 23px -> 46px) */
+@media(max-width:760px){nav div{row-gap:23px}}
