@@ -77,3 +77,13 @@ footer{color:var(--mut);font-size:13px;padding:26px 0 40px;border-top:1px solid 
 #about .txt .end{color:var(--gold)}
 #about>h2{text-shadow:0 2px 18px rgba(0,0,0,.75)}
 #about:after{background:linear-gradient(90deg,rgba(7,7,10,.72),rgba(7,7,10,.35) 65%,rgba(7,7,10,.2)),linear-gradient(180deg,rgba(7,7,10,.2),rgba(7,7,10,.45))}
+/* телефон: крупный логотип, меню в одну строку */
+@media(max-width:760px){
+nav{flex-direction:column;align-items:stretch;gap:6px;border-radius:28px;padding:14px 12px 10px}
+.logo{font-size:26px;letter-spacing:.12em;text-align:center}
+nav div{flex-wrap:nowrap;justify-content:space-between;gap:0}
+nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
+.txt .big{font-size:21px}
+}
+@media(max-width:760px){nav{padding-inline:8px}nav a.l{padding:7px 4px;font-size:12px}}
+@media(max-width:380px){nav a.l{font-size:11px;padding:7px 3px}}
