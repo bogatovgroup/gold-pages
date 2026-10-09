@@ -92,3 +92,6 @@ nav a.l{padding:7px 6px;font-size:12.5px;white-space:nowrap}
 .two .cta{margin-bottom:0}
 .two form{max-width:none}
 @media(max-width:760px){.two{grid-template-columns:1fr}.two #form{order:-1}}
+/* анимация главного экрана тянется до самого верха страницы, под шапку */
+.hero{margin-top:calc(-1*var(--navh,90px));padding-top:calc(var(--navh,90px) + 70px)}
+.fx{bottom:-40px;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}

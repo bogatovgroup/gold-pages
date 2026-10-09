@@ -91,6 +91,8 @@
 </div>
 </div>
 <script>
+// Высота шапки для отступа главного экрана
+(function(){var n=document.querySelector('nav');function f(){document.documentElement.style.setProperty('--navh',(n.offsetHeight+18)+'px')}f();window.addEventListener('resize',f)})();
 // Золотая пыль на главном экране: три слоя глубины, дымка, блики
 (function(){
 var c=document.getElementById('dust'),x=c.getContext('2d'),W=0,H=0,P=[],d=Math.min(window.devicePixelRatio||1,2),mx=0,my=0,tx=0,ty=0,raf,T=0;
